@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://localhost:3000/#/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+</style><style type="text/css">.App {
+  text-align: center;
+ /* background-color: rgb(148, 148, 151); */
+ background-image: url(/static/media/metal.d096b1cd.jpg);
+  width: 100vw;
+
+}
+
+.backgroundImg{
+  /* background-image: url(background.jpg); */
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.sideBar{
+height: 100%;
+width: 100%;
+background-color: green;
+
+}
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.header{
+  height: 15vh;
+  width: 80vw;
+  background-image: url(/static/media/gray.f258b84a.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10vw;
+  margin-right: 10vw;
+
+
+  /* position: fixed; */
+}
+.businessName{
+  height: 6vh;
+  background-color: white;
+  /* margin-right: 8vw; */
+  /* margin-top: 68px; */
+  /* border: solid 2px rgb(148, 148, 151); */
+  font-family: fantasy;
+  border-radius: 10px;
+  position: center;
+}
+.cart{
+  height: 20%;
+  margin-top: 4vh;
+  margin-right: 1vw;
+  font-size: 20px;
+ background-size: 40px;
+ background-color: white;
+ color: rgb(191, 158, 204);
+ font-family: 'Times New Roman', Times, serif;
+ border: 2px solid black;
+}
+
+.sides{
+  width: 100vw;
+  height: 100%;
+  /* background-color: rgb(148, 148, 151); */
+  background-image: url(/static/media/metal.d096b1cd.jpg)
+}
+
+.homeInfo{
+  height: 50vh;
+  width: 80vw;
+  border-bottom: 2px solid black;
+  /* background-color: gray; */
+}
+
+/* .body{
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+} */
+
+.bottomBorder{
+  width: 100%;
+  height: 15vh;
+}
+
+.titleBoxes{
+  height: 10vh;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+.comments{
+  height: 50vh;
+  width: 60vw;
+  margin: 2vh 18vw 2vh 10vw;
+  border: 2px solid black;
+  overflow:auto;
+}
+.theComment{
+  display: flex;
+  margin-left: 10vw;
+  margin-top: 3vh;
+  color: black;
+}
+
+.nav{
+  background-color: rgb(191, 158, 204);
+  font-size: 20px;
+  margin: 5px;
+  border-bottom: 10 solid red;
+  display: inline;
+  border-radius: 10px;
+
+}
+
+.quotesInput{
+  text-align: center;
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  width: 20vw;
+  margin-left: 29vw ;
+  border: 2px rgb(112, 112, 204) solid;
+  
+
+
+  
+}
+
+.getQuoteBtn{
+  margin-bottom: 10px;
+}
+
+.quotesTitle{
+  /* margin: 20vh 0px 0px 20px; */
+
+}
+
+.eachInput{
+  margin-bottom: 50px;
+}
+.quotesTotal{
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+
+.contact{
+  height: 100vh;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+
+}
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+
+}
+
+@media(min-width:1150px){
+  .navBucket{
+    height:100%;
+    padding-bottom: 15px;
+    display:flex;
+    align-items: flex-end;
+    
+  }
+
+  .basic{
+    display: none;
+  }
+  img{
+    display: none;
+  }
+}
+
+@media(max-width:1150px){
+  img {
+    width: 40px;
+  }
+  .businessName{
+    height: 20vh;
+    background-color: white;
+    /* margin-right: 8vw; */
+    /* margin-top: 68px; */
+    /* border: solid 2px rgb(148, 148, 151); */
+    font-family: fantasy;
+    border-radius: 10px;
+    position: center;
+    margin-right: 13vw;
+    font-size: 20px;
+  }
+
+  .navBucket{
+    display: none;
+  }
+  
+  .basic {
+    background-color: gray;
+    color: white;
+    height: 0;
+    -webkit-transition: 2s;
+    transition: 2s;
+    height: 0px;
+    overflow: hidden;
+  }
+  
+  .show {
+    height: 100px;
+  }
+}
+
+@media(max-width: 620px){
+
+}
+</style><script charset="utf-8" src="./React App_files/main.046919bf4355af475d03.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.ced5d92feeaeaa37d587.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.88a03c385e9f4443969f.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.64c422e041309a556a7b.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.84194455e96d5f046385.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.1470673745b6012f7610.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.4641ec66e592dfe1580b.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.82c726b8329c9f1e1c00.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.528806d6ca3bd768fbd1.hot-update.js"></script></head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"><div class="App"><div class="sides"><header class="header"><img src="./React App_files/hamburger_menu.5837d7aa.svg"><ul class="basic"><a href="http://localhost:3000/#/"><button class="nav">HOME</button></a><a href="http://localhost:3000/#/about"><button class="nav">ABOUT</button></a><a href="http://localhost:3000/#/contact"><button class="nav">CONTACT </button></a></ul><div class="navBucket"><a href="http://localhost:3000/#/"><button class="nav">HOME</button></a><a href="http://localhost:3000/#/about"><button class="nav">ABOUT</button></a><a href="http://localhost:3000/#/contact"><button class="nav">CONTACT </button></a></div><h1 class="businessName">Cam's Window Cleaning</h1><div><button class="nav">CART</button><button class="nav">Admin Login</button></div></header></div><div class="backgroundImg"><div><header><div></div></header><div class="body"><div><br></div><div class="titleBoxes"><h1 class="comment1">Why Choose Us?</h1></div><div class="homeInfo"></div><div><a href="http://localhost:3000/#/quotes"><button class="nav">Get A Quote!</button></a></div><div class="titleBoxes"><h1 class="comment1">Comments</h1></div><div class="comments"><div><label>Leave your comment here!</label><form id="input"></form><input placeholder="type here" value=""><button>Add</button><div class="theComment">* This is cool</div><div class="theComment">* This is cool</div><div class="theComment">* This is cool</div><div class="theComment">* This is cool</div><div class="theComment">* This is cool</div><div class="theComment">* This is cool</div><div class="theComment">* This is cool</div><div class="theComment">* This is cool</div><div class="theComment">* This is cool 2</div><div class="theComment">* hello3</div><div class="theComment">* hello</div><div class="theComment">* hello</div><div class="theComment">* test</div><div class="theComment">* test2</div><div class="theComment">* test</div><div class="theComment">* ff</div><div class="theComment">* sean</div><div class="theComment">* clear</div></div></div></div></div></div><div class="bottomBorder"></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js"></script><script src="./React App_files/1.chunk.js"></script><script src="./React App_files/main.chunk.js"></script><script src="./React App_files/main.033ce3b18ed55bd1c9b7.hot-update.js"></script>
+
+</body></html>

@@ -1,0 +1,38 @@
+-- CREATE TABLE users(
+-- user_id SERIAL PRIMARY KEY,
+-- first_name VARCHAR NOT NULL,
+-- fast_name VARCHAR NOT NULL,
+-- address VARCHAR NOT NULL,
+-- city VARCHAR NOT NULL,
+-- zip INTEGER NOT NULL,
+-- admin BOOLEAN 
+-- )
+
+-- ALTER TABLE users
+-- DROP COLUMN admin;
+
+-- SELECT * 
+-- FROM users;
+
+-- CREATE TABLE comments(
+-- comment_id SERIAL NOT NULL,
+-- comment VARCHAR(200) NOT NULL,
+-- customer_id INTEGER REFERENCES
+-- customer(user_id)
+-- )
+
+SELECT * 
+FROM users;
+
+
+-- ALTER TABLE customer
+-- ADD COLUMN admin BOOLEAN
+
+CREATE TABLE customer(
+--     customer_id SERIAL PRIMARY KEY,
+--     customer_name VARCHAR(180),
+--     customer_auth_id TEXT,
+--     customer_picture TEXT,
+--     customer_email TEXT,
+--     admin BOOLEAN
+-- )
