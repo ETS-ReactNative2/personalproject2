@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { updateUser } from '../ducks/reducer'
 
+
 // import Comments from './../components/Comments'
 // import Add from './Add'
 
@@ -15,6 +16,7 @@ class Home extends Component {
         this.state = {
             comments: [],
             updateInput: '',
+            
         }
 
         this.handleInput = this.handleInput.bind(this)
@@ -26,7 +28,7 @@ class Home extends Component {
 
     componentDidMount() {
         axios.get('/api/user-data').then((res) => {
-            console.log(res.data)
+           
             this.props.updateUser(res.data)
         })
 
@@ -50,18 +52,26 @@ class Home extends Component {
     // }
 
     handleInput(e) {
-        this.setState({ userInput: e.target.value })
+        if(e.target.value===null)
+        alert("You can't add nothing")
+        else{
+        this.setState({ userInput: e.target.value })}
     }
     handleUpdate(id) {
-        console.log('handling the edit')
-        axios.put(`/comment/${id}`, { comment: this.state.updateInput }).then(res => {
-            this.setState({ comments: res.data })
+        
+        axios.put(`/api/comment/${id}`, { comment: this.state.updateInput }).then(res => {
+            this.setState({ comments: res.data, userInput: '' })
         })
 
     }
     handleClick(e) {
         axios.post('/api/comment', { comment: this.state.userInput }).then(res => {
             this.setState({ comments: res.data, userInput: '' })
+        })
+    }
+    handleDelete(index){
+        axios.delete(`/api/comment/${index}`).then(res=>{
+            this.setState({comments: res.data})
         })
     }
 
@@ -71,19 +81,11 @@ class Home extends Component {
     }
 
 
-    handleDelete(index) {
-        axios.delete(`/comment/${index}`).then(res => {
-            this.setState({ comments: res.data })
-        })
-
-
-
-    }
 
     handleAddComment() { }
 
     render() {
-        console.log(this.props)
+        
         return (
             <div>
                 <header>
@@ -105,10 +107,18 @@ class Home extends Component {
                         <br></br>
                     </div>
                     <div className='titleBoxes'>
-                        <h1 className='comment1'>Why Choose Us?</h1>
+                        <h1 className='comment1'></h1>
                     </div>
+                    <div className="picContainer">
+                    <div className="camsPic"></div> 
+                    </div> 
                     <div className="homeInfo">
-
+                                
+                    <img id="cleaningHousePic" src= {require('../cleaninghouse.jpg')} alt=""></img>              
+                           <h5> Your Home</h5>
+                           
+                           <div className="text">  The appearance of your home is important to you and important to me to. That is why I work to make sure the inside and outside of your windows sparkle! I will make sure that the rest of your home is respected and kept clean by removing shoes while inside your home. You will love your the way your windows look.   </div>
+                            
                     </div>
                     <div>
                         <Link to="/quotes"><button className="nav">Get A Quote!</button></Link>
@@ -122,7 +132,7 @@ class Home extends Component {
                             
                             <form className="input" />
                             <h3>
-                                Comments
+                                Please let me know how I have done!
                                 </h3>
 
                             {this.props.user.customerID ? (<div>
@@ -134,11 +144,18 @@ class Home extends Component {
                             }
 
 
-                            {this.state.comments.map((comment, comment_id) => {
+                            {this.state.comments.map((comment) => {
+                                
                                 return (
 
-                                    < div className='theComment' key={comment_id}>
+                                    < div className='theComment' key={comment.comment_id}>
                                         * {comment.comment}
+                                        {this.props.user.admin ? <div>
+                                            <button onClick= {()=>this.handleDelete(comment.comment_id)}>Delete</button>
+                                            <button onClick= {()=>this.handleUpdate(comment.comment_id)}>Edit</button>
+                                        </div>
+                                        : null
+                                        }
                                     </div>
                                 )
                             })}
@@ -149,7 +166,11 @@ class Home extends Component {
                        
                     </div>
                     <div>
+                        
                                 {this.props.user.admin ? (<div>
+                                    <input className='updateInput' type='text' onChange={(e)=>{
+             this.setState({updateInput: e.target.value})
+           }}/>Update Text
                                    <Link to = "/admin/users"> <button>Users</button></Link>
                                     <Link to ="/admin/appointment"><button>Appointment</button></Link>
                                 </div>)
@@ -167,3 +188,4 @@ function mapStateToProps(state) {
     }
 }
 export default connect(mapStateToProps, { updateUser })(Home)
+

@@ -80,12 +80,7 @@ background-color: green;
   background-image: url(metal.jpg)
 }
 
-.homeInfo{
-  height: 50vh;
-  width: 80vw;
-  border-bottom: 2px solid black;
-  /* background-color: gray; */
-}
+
 
 /* .body{
   background-image: url(background.jpg);
@@ -121,6 +116,41 @@ background-color: green;
   text-shadow: -.5px 0 white, 0 .5px white, .5px 0 white, 0 -.5px white;
 
 }
+.commentBox{
+  padding: 0;
+  margin-left: 0;
+}
+
+.homeInfo{
+  height: 40vh;
+  width: 80vw;
+  border-bottom: 2px solid black;
+  font-size: 4vh;
+  background: rgb(225, 225, 228);
+  padding-top: 2vh;
+  display: flex;
+  
+  /* background-color: gray; */
+}
+
+.camsPic{
+  width: 30vw;
+  height: 40vh;
+  background-image: url(cam.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin-left: 28vw;
+
+  
+  
+}
+
+.whyText{
+  width: 80vw;
+  margin-top: 2vw;
+  font-size: 20px;
+}
 
 .nav{
   background-color: rgb(191, 158, 204);
@@ -145,7 +175,7 @@ background-color: green;
 input{
   border: solid 1px rgb(133, 88, 88);
   width: 20vw;
-  margin-left: 15vw;
+  margin-left: 5vw;
 }
 
 .getQuoteBtn{
@@ -162,6 +192,7 @@ input{
 
 .eachInput{
   margin-bottom: 50px;
+  margin-left: 15vw;
 }
 .quotesTotal{
   margin-bottom: 50px;
@@ -171,6 +202,56 @@ input{
 .contact{
   height: 100vh;
 }
+.appointments{
+  height: 100vh;
+}
+
+.appointmentsBox{
+  display: flex;
+  flex-direction: row;
+  
+  height: 20px;
+}
+.fName{
+  border: solid black 1px;
+  color: red;
+  width: 12vw;
+}
+.lName{
+  border: black 1px solid;
+  width: 12vw;
+}
+.addApp{
+  border: black 1px solid;
+  width: 25vw;
+
+}
+.cityApp{
+  border: black 1px solid;
+  width: 10vw;
+
+}
+.zipApp{
+  border: black 1px solid;
+  width: 10vw;
+
+}
+.winApp{
+  border: black 1px solid;
+  width: 4vw;
+
+}
+.hWinApp{
+  border: black 1px solid;
+  width: 4vw;
+
+}
+.totalApp{
+  border: black 1px solid;
+  width: 4vw;
+
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -194,13 +275,19 @@ input{
     margin-left: 21.5vw;
   }
 
-  .basic{
+  .basic {
     display: none;
     position:absolute;
     top: 15vh;
   }
-  img{
+  
+  .img2{
     display: none;
+  }
+   #cleaningHousePic{
+    height: 30vh;
+    left: 50vw;
+
   }
   
 }
@@ -260,7 +347,7 @@ input{
     
   }
   .eachInput{
-    margin-right: 5vw;
+    margin-right: 6vw;
   }
 
   .getQuoteBtn{
@@ -273,6 +360,45 @@ input{
   button{
     padding:0;
   }
+
+ 
+  
+  .camsPic{
+    width: 30vw;
+    height: 40vh;
+    background-image: url(cam.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin-left: 2vw;
+    margin-bottom: 2vh;
+    
+    
+  }
+  
+  .whyText{
+    width: 80vw;
+    margin-top: 2vw;
+    display: flex;
+    
+    
+  }
+  .text{
+    font-size: 20px;
+  }
+
+  .homeInfo{
+    height: 40vh;
+    width: 80vw;
+    border-bottom: 2px solid black;
+    font-size: 3vh;
+    background: rgb(225, 225, 228);
+    padding-top: 2vh;
+    display: flex;
+    
+    /* background-color: gray; */
+  }
+
 }
 
 @media(max-width: 620px){
@@ -320,5 +446,67 @@ input{
   .quotesInput{
     width: 50vw;
     margin-left: 15vw;
+  }
+  
+  .appointmentsBox{
+    display: flex;
+    flex-direction: row;
+    border: black 2px solid;
+    height: 20px;
+  }
+  .fName{
+    border: solid black 1px;
+    color: red;
+  }
+  .lName{
+    border: black 2px solid;
+  }
+  .addApp{
+    border: black 2px solid;
+  }
+  .cityApp{
+    border: black 2px solid;
+  }
+  .zipApp{
+    border: black 2px solid;
+  }
+  .winApp{
+    border: black 2px solid;
+  }
+  .hWinApp{
+    border: black 2px solid;
+  }
+  .totalApp{
+    border: black 2px solid;
+  }
+
+  .homeInfo{
+    height: 40vh;
+    width: 80vw;
+    border-bottom: 2px solid black;
+    font-size: 2vh;
+    background: rgb(225, 225, 228);
+    padding-top: 2vh;
+    
+    
+    /* background-color: gray; */
+  }
+  
+  .camsPic{
+    width: 30vw;
+    height: 40vh;
+    background-image: url(cam.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin-left: 2vw;
+    margin-bottom: 2vh;
+    
+    
+  }
+  
+  .whyText{
+    width: 80vw;
+    margin-top: 2vw;
   }
 }

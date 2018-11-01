@@ -40,7 +40,7 @@ class Nav extends Component {
             <div className='sides'>
 
                 <header className='header'>
-                    <img onClick={this.toggle} src={hamburger} />
+                    <img className="img2" onClick={this.toggle} alt="Toggle for menu" src={hamburger} />
                     <ul className={this.state.show ? 'basic show' : 'basic'}>
                         <Link to="/"><button className="nav">HOME</button></Link>
                         <Link to="/about"><button className="nav">ABOUT</button></Link>
