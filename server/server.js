@@ -23,7 +23,8 @@ const {
     REACT_APP_DOMAIN,
     REACT_APP_CLIENT_ID,
     CLIENT_SECRET,
-    CONNECTION_STRING
+    CONNECTION_STRING,
+    AUTH_PROTOCAL
 } = process.env;
 
 let authByPass = async (req, res, next) => {
