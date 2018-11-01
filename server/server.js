@@ -16,6 +16,8 @@ app.use(session({
 
 app.use(bodyParser.json())
 
+app.use( express.static( `${__dirname}/../build` ) );
+
 const {
     SERVER_PORT,
     REACT_APP_DOMAIN,
@@ -46,7 +48,7 @@ app.get('/auth/callback', async (req, res) => {
         client_secret: CLIENT_SECRET,
         code: req.query.code,
         grant_type: 'authorization_code',
-        redirect_uri: `http://${req.headers.host}/auth/callback`
+        redirect_uri: `${AUTH_PROTOCAL}://${req.headers.host}/auth/callback`
     }
     let tokenRes = await axios.post(`https://${REACT_APP_DOMAIN}/oauth/token`, payload)
     let userRes = await axios.get(`https://${REACT_APP_DOMAIN}/userinfo?access_token=${tokenRes.data.access_token}`)
@@ -79,7 +81,7 @@ app.get('/auth/callback/2', async (req, res) => {
         client_secret: CLIENT_SECRET,
         code: req.query.code,
         grant_type: 'authorization_code',
-        redirect_uri: `http://${req.headers.host}/auth/callback`
+        redirect_uri: `${AUTH_PROTOCAL}://${req.headers.host}/auth/callback`
     }
     let tokenRes = await axios.post(`https://${REACT_APP_DOMAIN}/oauth/token`, payload)
     let userRes = await axios.get(`https://${REACT_APP_DOMAIN}/userinfo?access_token=${tokenRes.data.access_token}`)
@@ -126,7 +128,7 @@ app.get('/auth/logout', (req, res) => {
     console.log("before", req.session)
     req.session.destroy();
     console.log(req.session)
-    res.redirect('http://localhost:3000/#/')
+    res.redirect(process.env.REACT_URL)
 })
 
 // axios.get('/comment', (req, res)=>{
