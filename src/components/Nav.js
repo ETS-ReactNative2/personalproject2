@@ -42,14 +42,12 @@ class Nav extends Component {
                 <header className='header'>
                     <img className="img2" onClick={this.toggle} alt="Toggle for menu" src={hamburger} />
                     <ul className={this.state.show ? 'basic show' : 'basic'}>
-                        <Link to="/"><button className="nav">HOME</button></Link>
-                        <Link to="/about"><button className="nav">ABOUT</button></Link>
-                        <Link to="/contact"><button className="nav">CONTACT </button></Link>
+                        
                     </ul>
                     <div className="navBucket">
-                        <Link to="/"><button className="nav">HOME</button></Link>
+                        {/* <Link to="/"><button className="nav">HOME</button></Link>
                         <Link to="/about"><button className="nav">ABOUT</button></Link>
-                        <Link to="/contact"><button className="nav">CONTACT </button></Link>
+                        <Link to="/contact"><button className="nav">CONTACT </button></Link> */}
 
                     </div>
                     <h1 className='businessName'>Cam's Window Cleaning</h1>
@@ -65,6 +63,7 @@ class Nav extends Component {
 
                     </div>
                 </header>
+                
             </div>
         )
     }

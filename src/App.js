@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import routes from "./routes"
 import Nav from './components/Nav'
+import {Link} from 'react-router-dom'
 // import {Switch, Route} from "react-router-dom"
 // import Users from "./components/Users"
 // import Home from "./components/Home"
@@ -28,6 +29,12 @@ class App extends Component {
     return (
       <div className="App">
       <Nav/>
+      <div className='tabs'>
+                    <Link to="/"><button className="nav">HOME</button></Link>
+                        <Link to="/about"><button className="nav">ABOUT</button></Link>
+                        <Link to="/contact"><button className="nav">CONTACT </button></Link>
+                        
+                    </div>
      
       
       <div className='backgroundImg'>

@@ -21,6 +21,12 @@ class Quotes extends Component {
         this.handleQuoteSubmit = this.handleQuoteSubmit.bind(this)
     }
 
+    componentDidMount() {
+        axios.get('/api/user-data').then((res) => {
+           
+            this.props.updateUser(res.data)
+        })}
+
     handleWindowsInput(value) {
 
         console.log(value)
@@ -90,9 +96,11 @@ class Quotes extends Component {
         // console.log(this.props)
         return (
             <div>
-                <div className='quotesInput'>
+                <div className='none'>
                     <h1 className='quotesTitle'>Fast And Easy Quote!</h1>
 
+                    {this.props.user.customerID? 
+                        <div className='quotesInput'>
                     * First Name: <input onChange={(e) => this.setState({ firstName: e.target.value })} placeholder="First Name" className='eachInput'></input>
                     * Last Name:  <input onChange={(e) => this.setState({ lastName: e.target.value })} placeholder="Last Name" className='eachInput'></input>
                     * Address:  <input onChange={(e) => this.setState({ address: e.target.value })} placeholder='Address' className='eachInput'></input>
@@ -102,7 +110,15 @@ class Quotes extends Component {
                     Windows over 20 feet high <input value={this.state.windowsHigh} onChange={(e) => this.handleHighWindowInput(e.target.value)} placeholder='High Windows' className='eachInput'></input>
                     <div className=''>Total</div>
                     <div className='quotesTotal'>${this.state.total}.00</div>
-                    
+                    </div>
+                    :
+                    <div className='quotesInput'>
+                    * Window Count:  <input type='number' value={this.state.windowCount} onChange={(e) => this.handleWindowsInput(e.target.value)} placeholder='# of Windows' className='eachInput'></input>
+                    Windows over 20 feet high <input value={this.state.windowsHigh} onChange={(e) => this.handleHighWindowInput(e.target.value)} placeholder='High Windows' className='eachInput'></input>
+                    <div className=''>Total</div>
+                    <div className='quotesTotal'>${this.state.total}.00</div>
+                    </div>
+                    }
 
                     {this.props.user.customerID ? (<div>
                         <button className="getQuoteBtn" onClick={this.quoteValidation}>Schedule Now</button>

@@ -40,7 +40,7 @@ let authByPass = async (req, res, next) => {
 
 }
 // app.use(authByPass)
-//endpoints
+// endpoints
 
 app.get('/auth/callback', async (req, res) => {
 

@@ -1,0 +1,539 @@
+.App {
+  text-align: center;
+ /* background-color: rgb(148, 148, 151); */
+ background-image: url(metal.jpg);
+  width: 100vw;
+
+}
+
+.backgroundImg{
+  background-image: url(greywood.jpg);
+  width: 80vw;
+  /* background-color: white; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  
+}
+.sideBar{
+height: 100%;
+width: 100%;
+background-color: green;
+
+}
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.header{
+  height: 15vh;
+  width: 80vw;
+  background-image: url(gray.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  position: relative;
+
+
+  /* position: fixed; */
+}
+.businessName{
+  height: 6vh;
+  background-color: white;
+  /* margin-right: 8vw; */
+  /* margin-top: 68px; */
+  /* border: solid 2px rgb(148, 148, 151); */
+  font-family: fantasy;
+  border-radius: 10px;
+  position: center;
+}
+.cart{
+  height: 20%;
+  margin-top: 4vh;
+  margin-right: 1vw;
+  font-size: 20px;
+ background-size: 40px;
+ background-color: white;
+ color: rgb(191, 158, 204);
+ font-family: 'Times New Roman', Times, serif;
+ border: 2px solid black;
+}
+
+.sides{
+  width: 100vw;
+  height: 100%;
+  /* background-color: rgb(148, 148, 151); */
+  background-image: url(metal.jpg)
+}
+
+
+
+/* .body{
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+} */
+
+.bottomBorder{
+  width: 100%;
+  height: 15vh;
+}
+
+.titleBoxes{
+  height: 10vh;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+.comments{
+  height: 30vh;
+  width: 60vw;
+  margin: 2vh 18vw 2vh 10vw;
+  border: 2px solid black;
+  overflow:auto;
+}
+.theComment{
+  display: flex;
+  font-size: 20px;
+  margin-left: 10vw;
+  margin-top: 3vh;
+  color: black;
+  text-shadow: -.5px 0 white, 0 .5px white, .5px 0 white, 0 -.5px white;
+
+}
+.commentBox{
+  padding: 0;
+  margin-left: 0;
+}
+
+.homeInfo{
+  height: 40vh;
+  width: 80vw;
+  border-bottom: 2px solid black;
+  font-size: 4vh;
+  background: rgb(225, 225, 228);
+  padding-top: 2vh;
+  display: flex;
+  
+  /* background-color: gray; */
+}
+
+.camsPic{
+  width: 30vw;
+  height: 40vh;
+  background-image: url(cam.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin-left: 28vw;
+
+  
+  
+}
+
+.whyText{
+  width: 80vw;
+  margin-top: 2vw;
+  font-size: 20px;
+}
+
+.nav{
+  background-color: rgb(191, 158, 204);
+  font-size: 20px;
+  margin: 5px;
+  border-bottom: 10 solid red;
+  display: inline;
+  border-radius: 10px;
+
+}
+
+.quotesInput{
+  text-align: center;
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  width: 50vw;
+  margin-left: 15vw ;
+  border: 2px rgb(112, 112, 204) solid;
+  background-color: oldlace;
+}
+input{
+  border: solid 1px rgb(133, 88, 88);
+  width: 20vw;
+  margin-left: 5vw;
+}
+
+.getQuoteBtn{
+  margin-bottom: 10px;
+  border: solid black 1px;
+  width: 7vw;
+  margin-left: 16.5vw;
+}
+
+.quotesTitle{
+  /* margin: 20vh 0px 0px 20px; */
+
+}
+
+.eachInput{
+  margin-bottom: 50px;
+  margin-left: 15vw;
+}
+.quotesTotal{
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+
+.contact{
+  height: 100vh;
+}
+.appointments{
+  height: 100vh;
+}
+
+.appointmentsBox{
+  display: flex;
+  flex-direction: row;
+  
+  height: 20px;
+}
+.fName{
+  border: solid black 1px;
+  color: red;
+  width: 12vw;
+}
+.lName{
+  border: black 1px solid;
+  width: 12vw;
+}
+.addApp{
+  border: black 1px solid;
+  width: 25vw;
+
+}
+.cityApp{
+  border: black 1px solid;
+  width: 10vw;
+
+}
+.zipApp{
+  border: black 1px solid;
+  width: 10vw;
+
+}
+.winApp{
+  border: black 1px solid;
+  width: 4vw;
+
+}
+.hWinApp{
+  border: black 1px solid;
+  width: 4vw;
+
+}
+.totalApp{
+  border: black 1px solid;
+  width: 4vw;
+
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+@media(min-width:1150px){
+  .navBucket{
+    height:100%;
+    padding-bottom: 15px;
+    display:flex;
+    align-items: flex-end;
+    
+  }
+  .getQuoteBtn{
+    margin-left: 21.5vw;
+  }
+
+  .basic {
+    display: none;
+    position:absolute;
+    top: 15vh;
+  }
+  
+  .img2{
+    display: none;
+  }
+   #cleaningHousePic{
+    height: 30vh;
+    left: 50vw;
+
+  }
+  
+}
+
+@media(max-width:1149px){
+  img {
+    width: 40px;
+  }
+  .businessName{
+    height: 10vh;
+    background-color: white;
+    
+    font-family: fantasy;
+    border-radius: 10px;
+    position: center;
+    margin: 0vh 12vw 0vh 26vw;
+    font-size: 20px;
+  }
+
+  .navBucket{
+    display: none;
+  }
+  
+  .basic {
+    background-color: gray;
+    color: white;
+    height: 0;
+    transition: 2s;
+    height: 0px;
+    overflow: hidden;
+    top: 12.7vh;
+    position: absolute;
+    width: 15vw;
+    
+    
+  }
+  .quotesInput{
+    text-align: center;
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  width: 40vw;
+  margin-left: 20vw ;
+  border: 2px rgb(112, 112, 204) solid;
+  }
+  
+  
+  .show {
+    height: 20vh;
+    position:absolute;
+    /* display: flex; */
+    /* flex-direction: column; */
+    width: 15vw;
+    justify-content: space-evenly;
+    
+
+    
+  }
+  .eachInput{
+    margin-right: 6vw;
+  }
+
+  .getQuoteBtn{
+    font-size: 10px; 
+    
+  }
+  ul{
+    padding: 0;
+  }
+  button{
+    padding:0;
+  }
+
+ 
+  
+  .camsPic{
+    width: 30vw;
+    height: 40vh;
+    background-image: url(cam.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin-left: 2vw;
+    margin-bottom: 2vh;
+    
+    
+  }
+  
+  .whyText{
+    width: 80vw;
+    margin-top: 2vw;
+    display: flex;
+    
+    
+  }
+  .text{
+    font-size: 20px;
+  }
+
+  .homeInfo{
+    height: 40vh;
+    width: 80vw;
+    border-bottom: 2px solid black;
+    font-size: 3vh;
+    background: rgb(225, 225, 228);
+    padding-top: 2vh;
+    display: flex;
+    
+    /* background-color: gray; */
+  }
+
+}
+
+@media(max-width: 620px){
+
+  img{
+    width: 8vw;
+  }
+  .nav{
+    background-color: rgb(191, 158, 204);
+    font-size: 10px;
+    margin-left: 0;
+    display: inline;
+    border-radius: 10px;
+  
+  }
+  .businessName{
+    height: 13vh;
+    background-color: white;
+  
+    font-family: fantasy;
+    border-radius: 10px;
+    position: center;
+    margin-right: 4vw;
+    font-size: 20px;
+    display: flex;
+    margin-left: 19vw;
+    margin-top: 1vh;
+  }
+
+  .show {
+    height: 4vh;
+    position:absolute;
+    /* display: flex; */
+    /* flex-direction: column; */
+    width: 80vw;
+    justify-content: space-evenly;
+  }
+  .comment1{
+    font-size: 20px;
+  }
+
+  .titleBoxes{
+    height: 5vh;
+  }
+  .quotesInput{
+    width: 50vw;
+    margin-left: 15vw;
+  }
+  
+  .appointmentsBox{
+    display: flex;
+    flex-direction: row;
+    border: black 2px solid;
+    height: 20px;
+  }
+  .fName{
+    border: solid black 1px;
+    color: red;
+  }
+  .lName{
+    border: black 2px solid;
+  }
+  .addApp{
+    border: black 2px solid;
+  }
+  .cityApp{
+    border: black 2px solid;
+  }
+  .zipApp{
+    border: black 2px solid;
+  }
+  .winApp{
+    border: black 2px solid;
+  }
+  .hWinApp{
+    border: black 2px solid;
+  }
+  .totalApp{
+    border: black 2px solid;
+  }
+
+  .homeInfo{
+    height: 40vh;
+    width: 80vw;
+    border-bottom: 2px solid black;
+    font-size: 2vh;
+    background: rgb(225, 225, 228);
+    padding-top: 2vh;
+    
+    
+    /* background-color: gray; */
+  }
+  
+  .camsPic{
+    width: 30vw;
+    height: 40vh;
+    background-image: url(cam.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin-left: 2vw;
+    margin-bottom: 2vh;
+    
+    
+  }
+  
+  .whyText{
+    width: 80vw;
+    margin-top: 2vw;
+  }
+
+  .App {
+    text-align: center;
+   /* background-color: rgb(148, 148, 151); */
+   background-image: none;
+    width: 100vw;
+  
+  }
+
+  .sides{
+    width: 100vw;
+    height: 100%;
+    /* background-color: rgb(148, 148, 151); */
+    background-image: url(metal.jpg)
+  }
+  
+  .backgroundImg{
+    background-image: url(greywood.jpg);
+    width: 100%;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* margin-left: 10vw; */
+    /* margin-right: 10vw; */
+    
+  }
+  
+}
