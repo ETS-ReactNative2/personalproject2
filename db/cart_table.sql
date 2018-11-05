@@ -1,0 +1,2 @@
+select amount
+from quotes

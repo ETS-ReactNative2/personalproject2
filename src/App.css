@@ -162,6 +162,7 @@
     
     
   }
+
   
   .whyText{
     width: 80vw;
@@ -198,8 +199,9 @@
   .getQuoteBtn{
     margin-bottom: 10px;
     border: solid black 1px;
-    width: 7vw;
-    margin-left: 16.5vw;
+    width: 12vw;
+    
+    
   }
   
   .quotesTitle{
@@ -208,10 +210,13 @@
 
   
   }
+
+  
   
   .eachInput{
     margin-bottom: 50px;
-    margin-left: 15vw;
+    margin-left: 10vw;
+    width: 30vw;
   }
   .eachInput2{
     margin-bottom: 50px;
@@ -223,9 +228,38 @@
     font-size: 30px;
   }
   
-  .contact{
+  .about{
+    
+    height: 35vh;
+    width: 20vw;
+    background-color: oldlace;
+    margin-left: 30vw;
+    font-size: 30px;
+  }
+  .aboutBody{
     height: 100vh;
   }
+  .contactThanks{
+    height: auto;
+    width: 20vw;
+    background-color: oldlace;
+    margin-left: 30vw;
+    font-size: 30px;
+  }
+
+  .contactPage{
+    width: 40vw;
+    height: auto;
+    background-color: oldlace;
+    margin-left: 20vw;
+    font-size: 30px;
+
+  }
+  
+.Thankyou{
+  height: 100vh;
+}
+
   .appointments{
     height: 100vh;
   }
@@ -275,6 +309,8 @@
     width: 4vw;
   
   }
+
+  
   
   
   @keyframes App-logo-spin {
@@ -296,7 +332,7 @@
       
     }
     .getQuoteBtn{
-      margin-left: 21.5vw;
+      margin-left: 1vw;
     }
   
     .basic {
@@ -323,14 +359,12 @@
     }
 
     #cleaningHousePic{
-      height: 15vh;
-      width: 20
-      /* left: 42vw; */
+      display: none;
   
     }
     .businessName{
-      height: 10vh;
-      background-color: white;
+      height: 8vh;
+      background-color: lightgray;
       
       font-family: fantasy;
       border-radius: 10px;
@@ -374,7 +408,7 @@
     
     
     .show {
-      height: 5vh;
+      height: 80vh;
       position:absolute;
       /* display: flex; */
       /* flex-direction: column; */
@@ -385,8 +419,19 @@
   
       
     }
+    .Joke{
+      font-size: 40px;
+      color: black;
+      background-color: oldlace;
+    }
+
+    .jokePic{
+      height: 60vh;
+      width: 60vw;
+    }
     .eachInput{
-      margin-right: 6vw;
+      margin-left: 5vw;
+      width: 30vw;
     }
   
     .getQuoteBtn{
@@ -409,7 +454,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       padding: 0;
-      margin-left: 2vw;
+      margin-left: 26.5vw;
       margin-bottom: 2vh;
       
       
@@ -446,8 +491,8 @@
       width: 8vw;
     }
     .nav{
-      background-color: rgb(191, 158, 204);
-      font-size: 10px;
+      background-color: rgb(160, 214, 200);
+      font-size: 20px;
       margin-left: 0;
       display: inline;
       border-radius: 10px;
@@ -465,6 +510,10 @@
       display: flex;
       margin-left: 19vw;
       margin-top: 1vh;
+    }
+
+    .commentInput{
+      width: 50vw;
     }
   
     .show {
@@ -491,8 +540,12 @@
     .titleBoxes{
       height: 5vh;
     }
-    .quotesInput{
+    .eachInput{
+      margin-left: 9vw;
       width: 50vw;
+    }
+    .quotesInput{
+      width: 70vw;
       margin-left: 15vw;
     }
     
@@ -557,6 +610,13 @@
       width: 80vw;
       margin-top: 2vw;
     }
+
+    .getQuoteBtn{
+      margin-bottom: 10px;
+      border: solid black 1px;
+      width: 20vw;
+    }
+
     .header{
         height: 15vh;
         width: 100vw;
@@ -587,7 +647,26 @@
       #cleaningHousePic{
           display: none;
       }
-      .text{
-        width: 
+
+      .buttons{
+    background-color: rgb(160, 214, 200)
       }
+
+      .contactPage{
+        width: 100vw;
+        height: auto;
+        background-color: oldlace;
+        margin-left: 0vw;
+        font-size: 30px;
+    
+      }
+      .about{
+    
+        height: 100vh;
+        width: 100vw;
+        background-color: oldlace;
+        margin-left: 0vw;
+        font-size: 30px;
+      }
+      
   }

@@ -142,19 +142,25 @@ app.get('/api/appointments', async (req, res)=>{
     res.status(200).send(appointments)
 })
 
+app.get('/api/allUsers', async (req,res)=>{
+    const db = req.app.get('db')
+    let allUsers = await db.allUsers_table()
+    res.status(200).send(allUsers)
+})
+
 
 app.post('/api/comment', async (req, res) => {
     const { customer_id } = req.session.user
     const { comment } = req.body
     const db = req.app.get('db')
     let comments = await db.create_comment([comment, customer_id])
-    res.status(200).send(comments)
+    res.status(200).send(comments.reverse())
 })
 
 app.get('/api/comment-data', async (req, res) => {
     const db = req.app.get('db')
     let comments = await db.read_comments()
-    res.status(200).send(comments)
+    res.status(200).send(comments.reverse())
 })
 
 app.delete('/api/comment/:id', async (req,res)=>{

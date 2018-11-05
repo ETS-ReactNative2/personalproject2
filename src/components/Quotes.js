@@ -65,7 +65,7 @@ class Quotes extends Component {
         const { firstName, lastName, address, city, zip, windowCount, windowsHigh, total } = this.state
         axios.post('/api/quote', { firstName, lastName, address, city, zip, windowCount, windowsHigh, total }).then(() => {
             console.log("in the then")
-            this.props.history.push("/calendar")
+            this.props.history.push("/ThankYou")
         })
 
     }
@@ -110,6 +110,7 @@ class Quotes extends Component {
                     Windows over 20 feet high <input value={this.state.windowsHigh} onChange={(e) => this.handleHighWindowInput(e.target.value)} placeholder='High Windows' className='eachInput'></input>
                     <div className=''>Total</div>
                     <div className='quotesTotal'>${this.state.total}.00</div>
+                    <div><button className="getQuoteBtn" onClick={this.quoteValidation}>Schedule Now</button></div>
                     </div>
                     :
                     <div className='quotesInput'>
@@ -117,14 +118,17 @@ class Quotes extends Component {
                     Windows over 20 feet high <input value={this.state.windowsHigh} onChange={(e) => this.handleHighWindowInput(e.target.value)} placeholder='High Windows' className='eachInput'></input>
                     <div className=''>Total</div>
                     <div className='quotesTotal'>${this.state.total}.00</div>
+                    <div>
+                    <div>Please login to set and pay for appointment---> <button className="nav" onClick={this.login}>Login</button></div>
+                    </div>
+
+
+
+                    
                     </div>
                     }
 
-                    {this.props.user.customerID ? (<div>
-                        <button className="getQuoteBtn" onClick={this.quoteValidation}>Schedule Now</button>
-                    </div>)
-                    : <div>Please login to set and pay for appointment---> <button className="nav" onClick={this.login}>Login</button></div>
-                }
+                  
                     
                 </div>
             </div>

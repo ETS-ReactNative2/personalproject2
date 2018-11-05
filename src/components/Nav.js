@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../App.css'
-import { Link } from 'react-router-dom'
+
 import hamburger from '.././hamburger_menu.svg'
 import { connect } from 'react-redux';
 import {updateUser} from '../ducks/reducer'
@@ -42,7 +42,11 @@ class Nav extends Component {
                 <header className='header'>
                     <img className="img2" onClick={this.toggle} alt="Toggle for menu" src={hamburger} />
                     <ul className={this.state.show ? 'basic show' : 'basic'}>
-                        
+                    <div className="Joke">
+                    THIS IS MY ANNOUNCMENT THAT I WILL BE JOINING COHORT 43! 
+                    
+                    </div>
+                    <img className="jokePic" alt='' src={require('../Isuck.jpeg')} ></img>
                     </ul>
                     <div className="navBucket">
                         {/* <Link to="/"><button className="nav">HOME</button></Link>
@@ -52,10 +56,11 @@ class Nav extends Component {
                     </div>
                     <h1 className='businessName'>Cam's Window Cleaning</h1>
                     <div>
-                        <button className="nav">CART</button>
+                    <button className="nav">CART</button>
                     {this.props.user.customerID ? 
-            
+                        
                         <button onClick={this.logout} className="nav">Logout </button>
+                        
                         :
                          <button onClick={this.login} className="nav">Login</button>}
                         
