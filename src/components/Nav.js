@@ -5,6 +5,7 @@ import hamburger from '.././hamburger_menu.svg'
 import { connect } from 'react-redux';
 import {updateUser} from '../ducks/reducer'
 import axios from 'axios'
+import sad from '.././Sad-face.jpg'
 
 class Nav extends Component {
     constructor(props) {
@@ -40,7 +41,7 @@ class Nav extends Component {
             <div className='sides'>
 
                 <header className='header'>
-                    <img className="img2" onClick={this.toggle} alt="Toggle for menu" src={hamburger} />
+                    <img className="img2" onClick={this.toggle} alt="Toggle for menu" src={sad} />
                     <ul className={this.state.show ? 'basic show' : 'basic'}>
                     <div className="Joke">
                     THIS IS MY ANNOUNCMENT THAT I WILL BE JOINING COHORT 43! 

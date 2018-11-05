@@ -357,6 +357,10 @@
     img {
       width: 40px;
     }
+    .img2{
+      width: 10vw;
+      
+    }
 
     #cleaningHousePic{
       display: none;
@@ -371,6 +375,7 @@
       position: center;
       margin: 0vh 12vw 0vh 26vw;
       font-size: 20px;
+      margin-left: 14vw;
     }
   
     .navBucket{
