@@ -115,7 +115,7 @@ class Home extends Component {
                            <h5> </h5>
                            
                            <div className="text">
-                           The appearance of your home is important to you and important to me to. That is why I work to make sure the inside and outside of your windows sparkle! I will make sure that the rest of your home is respected and kept clean by removing shoes while inside your home. You will love the way your windows look.    </div>
+                           The appearance of your home is important to you and important to me too. That is why I work to make sure the inside and outside of your windows sparkle! I will make sure that the rest of your home is respected and kept clean by removing shoes while inside your home. You will love the way your windows look.    </div>
                             
                     </div>
                     <div>
