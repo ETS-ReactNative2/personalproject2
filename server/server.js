@@ -113,6 +113,7 @@ app.get('/auth/callback/2', async (req, res) => {
 
 app.get('/api/user-data', (req, res) => {
     if (req.session.user) {
+        console.log(req.session.user)
         var name = req.session.user.customer_name
         var picture = req.session.user.customer_picture
         var customerID = req.session.user.customer_id
@@ -139,6 +140,7 @@ app.get('/auth/logout', (req, res) => {
 app.get('/api/appointments', async (req, res)=>{
     const db = req.app.get('db')
     let appointments = await db.appointments_table()
+    console.log(appointments)
     res.status(200).send(appointments)
 })
 
@@ -182,11 +184,11 @@ app.put('/api/comment/:id', async (req,res)=>{
 
 app.post('/api/quote', async (req, res) => {
     console.log(req.body)
-    const { firstName, lastName, address, city, zip, windowCount, windowsHigh, total } = req.body
+    const { fullName, address, city, zip, windowCount, windowsHigh, total } = req.body
     const {customer_id}=req.session.user
     const db = req.app.get('db')
-    console.log(req.session.user)
-    await db.create_user_quote([firstName, lastName, address, city, zip, windowCount, windowsHigh, total, customer_id])
+    
+    await db.create_user_quote([fullName, address, city, zip, windowCount, windowsHigh, total, customer_id])
     res.sendStatus(200)
 })
 

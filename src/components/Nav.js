@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../App.css'
 
-import hamburger from '.././hamburger_menu.svg'
+
 import { connect } from 'react-redux';
 import {updateUser} from '../ducks/reducer'
 import axios from 'axios'
@@ -37,7 +37,7 @@ class Nav extends Component {
     }
 
     render() {
-        return (
+      return (
             <div className='sides'>
 
                 <header className='header'>
@@ -57,13 +57,13 @@ class Nav extends Component {
                     </div>
                     <h1 className='businessName'>Cam's Window Cleaning</h1>
                     <div>
-                    <button className="nav">CART</button>
+                    <button className="nav"><span>CART</span></button>
                     {this.props.user.customerID ? 
                         
-                        <button onClick={this.logout} className="nav">Logout </button>
+                        <button onClick={this.logout} className="nav"><span>Logout</span> </button>
                         
                         :
-                         <button onClick={this.login} className="nav">Login</button>}
+                         <button onClick={this.login} className="nav"><span>Login</span></button>}
                         
                         {/* <button onClick={this.login} className="login">Admin Login</button> */}
 

@@ -1,21 +1,46 @@
 .App {
-    text-align: center;
+    /* text-align: center; */
    /* background-color: rgb(148, 148, 151); */
-   background-image: url(metal.jpg);
+   /* background-image: url(metal.jpg); */
     width: 100vw;
   
+  }
+
+  .flex{
+    display: flex;
+  }
+  .secondGroup{
+    margin-left: 2vw;
+  }
+
+  #center{
+    text-align: center;
   }
   div{
     font-family: 'Cinzel', serif;
     size: 10px;
 
   }
+  h5{
+    /* background-color: white; */
+    width: 31vw;
+    margin-left: 24vw;
+  }
   
+  .services{
+    background-color: rgb(236, 235, 235);
+    width: 80vw;
+    text-align: center;
+    border: solid black 1px;
+    
+  }
+
   .backgroundImg{
     /* background-image: url(greywood.jpg); */
      
     width: 80vw;
-    background-color: lightgray;
+    /* background-color: lightgray; */
+    border: solid black 1px;
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 10vw;
@@ -45,7 +70,7 @@
   .header{
     height: 15vh;
     width: 80vw;
-    background-image: url(gray.jpg);
+    background-image: url(./images/silver1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -57,14 +82,16 @@
   .tabs{
     height: 5vh;
     width: 80vw;
-    background-color: rgb(225, 225, 228);
+    /* background-color: rgb(225, 225, 228); */
     margin-left: 10vw;
+    /* background-image: url(./images/silver1.jpg); */
+    text-align: center;
     
   }
   .businessName{
     height: 6vh;
-    background-color: lightgray;
-    margin-left: 11vw;
+    /* background-color: lightgray; */
+    margin-left: 7vw;
     /* margin-top: 68px; */
     /* border: solid 2px rgb(148, 148, 151); */
     font-family: fantasy;
@@ -87,7 +114,7 @@
     width: 100vw;
     height: 100%;
     /* background-color: rgb(148, 148, 151); */
-    background-image: url(metal.jpg)
+    /* background-image: url(metal.jpg) */
   }
   
   
@@ -120,6 +147,7 @@
    .comments2{
        border-bottom: solid black 1px;
        background-color: bisque; 
+       
    }
 
   .theComment{
@@ -137,17 +165,31 @@
     margin-left: 0;
     overflow: auto;
   }
+  .services{
+    margin-bottom: 2vh;
+    margin-top: 0;
+  }
   
   .homeInfo{
-    height: 40vh;
+    height: 79vh;
     width: 80vw;
-    border-bottom: 2px solid black;
+    /* border-bottom: 2px solid black; */
     font-size: 30px;
-    background: rgb(225, 225, 228);
-    padding-top: 2vh;
+    /* background: rgb(225, 225, 228); */
+    padding-top: 0vh;
+  }
+  .homeBody{
     display: flex;
+    padding: 1vh;
+    /* border-bottom: gray solid 1px; */
+  }
+
+  #businessPic{
+    height: 20vh;
+    width: 12vw;
+    border-radius: 0;
     
-    /* background-color: gray; */
+    
   }
   
   .camsPic{
@@ -171,15 +213,38 @@
   }
   
   .nav{
-    background-color: rgb(160, 214, 200);
+    background-color: rgb(247, 239, 245);
     font-size: 20px;
     margin: 5px;
-    
     display: inline;
     border-radius: 10px;
-  
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 2px 2px;
+  }
+  .nav span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .nav span:after{
+    content: '   >>';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .nav:hover span{
+    padding-right: 35px;
   }
   
+  .nav:hover span:after{
+    opacity: 1;
+    right: 0;
+    
+  }
   .quotesInput{
     text-align: center;
     display: flex;
@@ -207,6 +272,7 @@
   .quotesTitle{
     padding: 0;
     margin: 0;
+    text-align: center;
 
   
   }
@@ -242,7 +308,7 @@
   .contactThanks{
     height: auto;
     width: 20vw;
-    background-color: oldlace;
+    /* background-color: oldlace; */
     margin-left: 30vw;
     font-size: 30px;
   }
@@ -309,6 +375,15 @@
     width: 4vw;
   
   }
+  .text{
+    font-size: 17px;
+    margin-left: 1vw;
+  }
+
+
+
+
+
 
   
   
@@ -345,8 +420,8 @@
       display: none;
     }
      #cleaningHousePic{
-      height: 38vh;
-      border-radius: 60px;
+      height: 25vh;
+      /* border-radius: 60px; */
       /* left: 42vw; */
   
     }
@@ -483,7 +558,7 @@
       font-size: 20px;
       background: rgb(225, 225, 228);
       padding-top: 2vh;
-      display: flex;
+      
       
       /* background-color: gray; */
     }
@@ -501,7 +576,12 @@
       margin-left: 0;
       display: inline;
       border-radius: 10px;
+      opacity: 1;
+      transition: 0.3s;
     
+    }
+    .nav:hover{
+      opacity: 0.6
     }
     .businessName{
       height: 13vh;

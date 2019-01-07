@@ -1,33 +1,37 @@
 import React, { Component } from 'react';
-import StripeCheckout from 'react-stripe-checkout'
 import axios from 'axios'
 
+import {Elements, StripeProvider} from 'react-stripe-elements';
+import CheckoutForm from './CheckoutForm';
 
 class Checkout extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            amount: 53645
+            complete: false
          }
+         this.submit=this.submit.bind(this)
     }
-
-    onToken = (token) => {
-        token.card = void 0
-        axios.post('/api/payment', {token, amount: this.state.amount}).then(res => {
-            console.log(res)
+    async submit(ev){
+        let {token}= await this.props.stripe.createToken({name: "Name"})
+        let response = await fetch("/charge",{
+            method: "post",
+            headers: {"Content-Type": "text/plain"},
+            body: token.id
         })
-    }
+        if (response.ok) console.log("purchase Complete")
+    }  
 
     render() { 
+        if (this.state.complete) return <h1>Purchase Complete</h1>
         return ( 
-           <StripeCheckout
-                name="Stripe Demo inc."
-                description="Dolla Dolla Bills"
-                image="http://via.placeholder.com/100x100"
-                token= {this.onToken}
-                stripeKey={process.env.REACT_APP_STRIPE_KEY}
-                amount={this.state.amount}
-            />
+            <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
+            <div className="example">
+              <Elements>
+                <CheckoutForm />
+              </Elements>
+            </div>
+          </StripeProvider>
          );
     }
 }

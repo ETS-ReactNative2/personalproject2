@@ -35,8 +35,8 @@ export default class Appointment extends Component{
                             <div className="hWinApp">High Window Count</div>
                             <div className="totalApp">Total</div> */}
 
-                            <div className="fName">{`${appointment.first_name}`}</div>
-                            <div className="lName">{`${appointment.last_name}`}</div>
+                            <div className="fName">{`${appointment.full_name}`}</div>
+                            <div className="lName">{}</div>
                             <div className="addApp">{`${appointment.address}`}</div>
                             <div className="cityApp">{`${appointment.city}`}</div>
                             <div className="zipApp">{` ${appointment.zip}`}</div>

@@ -9,6 +9,7 @@ import Contact from './components/Contact'
 import Quotes from './components/Quotes'
 import About from './components/About'
 import Thanks from './components/ThankYou'
+import CheckOut from './components/Checkout'
 
 export default(
     <Switch>
@@ -21,5 +22,7 @@ export default(
         <Route component={Appointment} path="/admin/appointment"/>
         <Route component={Users} path="/admin/users"/>
         <Route component={Thanks} path="/ThankYou"/>
+        <Route component={CheckOut} path="/CheckOut"/>
+        
     </Switch>
 )

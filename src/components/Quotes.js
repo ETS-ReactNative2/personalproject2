@@ -8,8 +8,7 @@ class Quotes extends Component {
     constructor() {
         super();
         this.state = {
-            firstName: '',
-            lastName: '',
+            fullName: '',
             address: '',
             city: '',
             zip: '',
@@ -25,7 +24,9 @@ class Quotes extends Component {
         axios.get('/api/user-data').then((res) => {
            
             this.props.updateUser(res.data)
-        })}
+        })
+        
+    }
 
     handleWindowsInput(value) {
 
@@ -54,16 +55,16 @@ class Quotes extends Component {
     }
 
     quoteValidation() {
-        const { firstName, lastName, address, city, zip, windowCount, windowsHigh } = this.state
-        if (firstName && lastName && address && city && zip && windowCount && windowsHigh) {
+        const { fullName, address, city, zip, windowCount, windowsHigh } = this.state
+        if (fullName  && address && city && zip && windowCount && windowsHigh) {
             this.handleQuoteSubmit()
         }
         else { alert("Please complete the form") }
     }
 
     handleQuoteSubmit() {
-        const { firstName, lastName, address, city, zip, windowCount, windowsHigh, total } = this.state
-        axios.post('/api/quote', { firstName, lastName, address, city, zip, windowCount, windowsHigh, total }).then(() => {
+        const { fullName, address, city, zip, windowCount, windowsHigh, total } = this.state
+        axios.post('/api/quote', { fullName, address, city, zip, windowCount, windowsHigh, total }).then(() => {
             console.log("in the then")
             this.props.history.push("/ThankYou")
         })
@@ -101,8 +102,8 @@ class Quotes extends Component {
 
                     {this.props.user.customerID? 
                         <div className='quotesInput'>
-                    * First Name: <input onChange={(e) => this.setState({ firstName: e.target.value })} placeholder="First Name" className='eachInput'></input>
-                    * Last Name:  <input onChange={(e) => this.setState({ lastName: e.target.value })} placeholder="Last Name" className='eachInput'></input>
+                    * FullName: <input onChange={(e) => this.setState({ fullName: e.target.value })} placeholder="First Name" className='eachInput'></input>
+                    
                     * Address:  <input onChange={(e) => this.setState({ address: e.target.value })} placeholder='Address' className='eachInput'></input>
                     * City: <input onChange={(e) => this.setState({ city: e.target.value })} placeholder='City' className='eachInput'></input>
                     * Zip code:  <input onChange={(e) => this.setState({ zip: e.target.value })} placeholder='Zip code' className='eachInput'></input>

@@ -2,48 +2,42 @@ import React, { Component } from 'react';
 import './App.css';
 import routes from "./routes"
 import Nav from './components/Nav'
-import {Link} from 'react-router-dom'
-// import {Switch, Route} from "react-router-dom"
-// import Users from "./components/Users"
-// import Home from "./components/Home"
-// import Calendar from './components/Calendar'
-// import Appointment from './components/Appointment'
-// import Schedule from './components/Schedule'
-// import Contact from './components/Contact'
-// import Quotes from './components/Quotes'
-// import About from './components/About'
+import { Link } from 'react-router-dom'
+import { Elements, StripeProvider } from 'react-stripe-elements'
+import CheckoutForm from './components/CheckoutForm'
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super()
-    this.state={
+    this.state = {
       isAdmin: false,
       isUser: false
     }
   }
- 
-  
+
+
 
   render() {
-    
+
     return (
       <div className="App">
-      <Nav/>
-      <div className='tabs'>
-                    <Link to="/"><button className="nav">HOME</button></Link>
-                        <Link to="/about"><button className="nav">ABOUT</button></Link>
-                        <Link to="/contact"><button className="nav">CONTACT </button></Link>
-                        
-                    </div>
-     
-      
-      <div className='backgroundImg'>
-      
-      
-      {routes}
-      </div>
-      <div className='bottomBorder'></div>
-      
+        <Nav />
+        <div className='tabs'>
+          <Link to="/"><button className="nav"><span>HOME</span></button></Link>
+          <Link to="/about"><button className="nav"><span>ABOUT</span></button></Link>
+          <Link to="/contact"><button className="nav"><span>CONTACT</span> </button></Link>
+
+        </div>
+
+
+        <div className='backgroundImg'>
+         
+           
+
+          {routes}
+        </div>
+        <div className='bottomBorder'></div>
+
       </div>
     );
   }
