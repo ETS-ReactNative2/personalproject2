@@ -3,8 +3,8 @@ import './App.css';
 import routes from "./routes"
 import Nav from './components/Nav'
 import { Link } from 'react-router-dom'
-import { Elements, StripeProvider } from 'react-stripe-elements'
-import CheckoutForm from './components/CheckoutForm'
+// import { Elements, StripeProvider } from 'react-stripe-elements'
+// import CheckoutForm from './components/CheckoutForm'
 
 class App extends Component {
   constructor() {
