@@ -47,6 +47,7 @@ FROM users;
 CREATE TABLE quotes(
 customer_id int,
 FOREIGN KEY (customer_id) REFERENCES customer (customer_id) on delete cascade,
+phone VARCHAR(15),
 windowcount int NOT NULL, 
 highwindows int,
 amount int

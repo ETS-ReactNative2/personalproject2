@@ -12,6 +12,7 @@ class Quotes extends Component {
             address: '',
             city: '',
             zip: '',
+            phoneNumber:'',
             windowCount: '',
             windowsHigh: '',
             total: ''
@@ -55,16 +56,16 @@ class Quotes extends Component {
     }
 
     quoteValidation() {
-        const { fullName, address, city, zip, windowCount, windowsHigh } = this.state
-        if (fullName  && address && city && zip && windowCount && windowsHigh) {
+        const { fullName, address, city, zip, phoneNumber, windowCount, windowsHigh } = this.state
+        if (fullName  && address && city && zip && phoneNumber && windowCount && windowsHigh) {
             this.handleQuoteSubmit()
         }
         else { alert("Please complete the form") }
     }
 
     handleQuoteSubmit() {
-        const { fullName, address, city, zip, windowCount, windowsHigh, total } = this.state
-        axios.post('/api/quote', { fullName, address, city, zip, windowCount, windowsHigh, total }).then(() => {
+        const { fullName, address, city, zip, phoneNumber, windowCount, windowsHigh, total } = this.state
+        axios.post('/api/quote', { fullName, address, city, zip, phoneNumber, windowCount, windowsHigh, total }).then(() => {
             console.log("in the then")
             this.props.history.push("/ThankYou")
         })
@@ -107,6 +108,7 @@ class Quotes extends Component {
                     * Address:  <input onChange={(e) => this.setState({ address: e.target.value })} placeholder='Address' className='eachInput'></input>
                     * City: <input onChange={(e) => this.setState({ city: e.target.value })} placeholder='City' className='eachInput'></input>
                     * Zip code:  <input onChange={(e) => this.setState({ zip: e.target.value })} placeholder='Zip code' className='eachInput'></input>
+                    * Phone Number:  <input onChange={(e) => this.setState({ phoneNumber: e.target.value })} placeholder='Phone #' className='eachInput'></input>
                     * Window Count:  <input type='number' value={this.state.windowCount} onChange={(e) => this.handleWindowsInput(e.target.value)} placeholder='# of Windows' className='eachInput'></input>
                     Windows over 20 feet high <input value={this.state.windowsHigh} onChange={(e) => this.handleHighWindowInput(e.target.value)} placeholder='High Windows' className='eachInput'></input>
                     <div className=''>Total</div>

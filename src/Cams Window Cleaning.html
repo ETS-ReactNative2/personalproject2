@@ -1,4 +1,43 @@
-.App {
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://localhost:3000/#/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+    <link href="./Cams Window Cleaning_files/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+
+    <script src="./Cams Window Cleaning_files/saved_resource"></script>
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Cams Window Cleaning</title>
+  <style type="text/css">body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+</style><style type="text/css">.App {
     /* text-align: center; */
    /* background-color: rgb(148, 148, 151); */
    /* background-image: url(metal.jpg); */
@@ -70,7 +109,7 @@
   .header{
     height: 15vh;
     width: 80vw;
-    background-image: url(./images/silver1.jpg);
+    background-image: url(/static/media/silver1.055e1710.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -86,21 +125,6 @@
     margin-left: 10vw;
     /* background-image: url(./images/silver1.jpg); */
     text-align: center;
-    
-  }
-
-  .tabs2{
-    display: flex;
-    align-items: center;
-    height: 6vh;
-    width: 80vw;
-    /* background-color: rgb(225, 225, 228); */
-    margin-left: 37%;
-    /* background-image: url(./images/silver1.jpg); */
-    text-align: center;
-  }
-
-  .users-table{
     
   }
   .businessName{
@@ -210,7 +234,7 @@
   .camsPic{
     width: 40vw;
     height: 40vh;
-    background-image: url(cam.jpg);
+    background-image: url(/static/media/cam.c435c365.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     padding: 0;
@@ -233,6 +257,7 @@
     margin: 5px;
     display: inline;
     border-radius: 10px;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
     cursor: pointer;
     box-shadow: 2px 2px;
@@ -241,6 +266,7 @@
     cursor: pointer;
     display: inline-block;
     position: relative;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
   }
   .nav span:after{
@@ -249,6 +275,7 @@
     opacity: 0;
     top: 0;
     right: -20px;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
   }
   .nav:hover span{
@@ -273,7 +300,6 @@
     margin-left: 15vw ;
     border: 2px rgb(112, 112, 204) solid;
     background-color: oldlace;
-    font-size: 25px;
   }
   input{
     border: solid 1px rgb(133, 88, 88);
@@ -303,12 +329,7 @@
     margin-bottom: 50px;
     margin-left: 10vw;
     width: 30vw;
-    height: 3vh;
-    font-size: 15px;
-    border: none;
   }
-
-  
   .eachInput2{
     margin-bottom: 50px;
     margin-left: 15vw;
@@ -385,11 +406,6 @@
     display: flex;
     border-bottom: solid gray 1px;
   }
-  .titles1{
-    display: flex;
-    background-color: rgb(241, 241, 241);
-    border-bottom: solid 1px black;
-  }
   
   .appointmentsBox{
     display: flex;
@@ -408,7 +424,7 @@
   }
   .lName{
     /* border: black 1px solid; */
-    width: 12vw;
+    /* width: 12vw; */
   }
   .addApp{
     /* border: black 1px solid; */
@@ -458,12 +474,34 @@
   
   
   
-  @keyframes App-logo-spin {
+  @-webkit-keyframes App-logo-spin {
     from {
-      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
     }
     to {
-      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  
+  }
+
+
+
+
+
+
+  
+  
+  
+  @keyframes App-logo-spin {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
     }
   
   }
@@ -531,6 +569,7 @@
       background-color: gray;
       color: white;
       height: 0;
+      -webkit-transition: 2s;
       transition: 2s;
       height: 0px;
       overflow: hidden;
@@ -600,7 +639,7 @@
     .camsPic{
       width: 30vw;
       height: 40vh;
-      background-image: url(cam.jpg);
+      background-image: url(/static/media/cam.c435c365.jpg);
       background-size: contain;
       background-repeat: no-repeat;
       padding: 0;
@@ -647,6 +686,7 @@
       display: inline;
       border-radius: 10px;
       opacity: 1;
+      -webkit-transition: 0.3s;
       transition: 0.3s;
     
     }
@@ -717,7 +757,6 @@
     }
     .lName{
       /* border: black 2px solid; */
-      width: 7vw;
     }
     .addApp{
       /* border: black 2px solid; */
@@ -756,7 +795,7 @@
     .camsPic{
       width: 100vw;
       /* height: 80vh; */
-      background-image: url(cam.jpg);
+      background-image: url(/static/media/cam.c435c365.jpg);
       background-size: contain;
       background-repeat: no-repeat;
       padding: 0;
@@ -780,7 +819,7 @@
     .header{
         height: 15vh;
         width: 100vw;
-        background-image: url(gray.jpg);
+        background-image: url(/static/media/gray.f258b84a.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         display: flex;
@@ -795,7 +834,7 @@
         /* position: fixed; */
       }
       .backgroundImg{
-        background-image: url(greywood.jpg);
+        background-image: url(/static/media/greywood.98a3c7db.jpg);
         width: 100vw;
         /* background-color: white; */
         background-repeat: no-repeat;
@@ -831,4 +870,22 @@
       .img2{
         display: none;
       }
-  }
+  }</style><script charset="utf-8" src="./Cams Window Cleaning_files/main.d7c431ef45d09d9e2a0b.hot-update.js"></script><script charset="utf-8" src="./Cams Window Cleaning_files/main.7c07064797c0ff824c46.hot-update.js"></script><script charset="utf-8" src="./Cams Window Cleaning_files/main.6e95656465ca60cd4a10.hot-update.js"></script><script charset="utf-8" src="./Cams Window Cleaning_files/main.456da459f3ad8ceb4244.hot-update.js"></script></head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"><div class="App"><div class="sides"><header class="header"><img class="img2" alt="Toggle for menu" src="./Cams Window Cleaning_files/Sad-face.d9379cbe.jpg"><ul class="basic"><div class="Joke">THIS IS MY ANNOUNCMENT THAT I WILL BE JOINING COHORT 43!</div><img class="jokePic" alt="" src="./Cams Window Cleaning_files/Isuck.07d991c1.jpeg"></ul><div class="navBucket"></div><h1 class="businessName">Cam's Window Cleaning</h1><div><button class="nav"><span>CART</span></button><button class="nav"><span>Logout</span> </button></div></header></div><div class="tabs"><a href="http://localhost:3000/#/"><button class="nav"><span>HOME</span></button></a><a href="http://localhost:3000/#/about"><button class="nav"><span>ABOUT</span></button></a><a href="http://localhost:3000/#/contact"><button class="nav"><span>CONTACT</span> </button></a></div><div class="backgroundImg"><div><header><div></div></header><div class="body"><div class="picContainer"></div><div class="homeInfo"><div class="services">Services</div><h5>Residential Window Cleaning</h5><div class="homeBody"><img id="cleaningHousePic" src="./Cams Window Cleaning_files/cleaninghouse.b3289a4f.jpg" alt=""><div class="text">If it is made of glass, we can clean it.  Many new homes are full of windows to allow the maximum amount of sun into your home.  We will provide a streak free, sparkling view for you to enjoy.  Our services include:<div class="flex"><br><div><div> • Interior/Exterior Window Cleaning</div><div> • Window Casings</div><div> • Screen Cleaning</div></div><div class="secondGroup"><div>• Mirror Cleaning</div><div>• Chandelier Cleaning</div><div>• Ceiling Fan Cleaning</div></div></div></div></div><h5>Commercial Window Cleaning</h5><div class="homeBody"><img id="businessPic" src="./Cams Window Cleaning_files/businessNew.df94b38f.png" alt=""><div class="text">Make sure your busi​ness portrays the right message to potential customers. A clean first impression says a lot about your business.  We provide the same attention to detail as we do our residential customers.  We are not your typical commercial window cleaning company.  We scrub and detail each window by hand and leave no dirty residue behind.</div></div></div><div id="center"><div class="getQuote"><a href="http://localhost:3000/#/quotes"><button class="nav">Get A Quote!</button></a></div><div class="titleBoxes"><h1 class="comment1">Comments</h1></div><div class="comments"><div><form class="input"></form><h4 class="comments2">Please let me know how I have done!</h4><div><input placeholder="type here" class="commentInput" value=""><button class="comment-button">Add</button></div><div class="theComment">Customer(1): this woks with enter<div><button class="buttons">Delete</button><button class="buttons">Edit</button></div></div><div class="theComment">Customer(1): This is another comment<div><button class="buttons">Delete</button><button class="buttons">Edit</button></div></div><div class="theComment">Customer(6): <div><button class="buttons">Delete</button><button class="buttons">Edit</button></div></div><div class="theComment">Customer(1): Hello<div><button class="buttons">Delete</button><button class="buttons">Edit</button></div></div><div class="theComment">Customer(4): You da best man!!! <div><button class="buttons">Delete</button><button class="buttons">Edit</button></div></div></div></div><div><div><input class="updateInput" type="text">Update Text<a href="http://localhost:3000/#/admin/users"> <button>Users</button></a><a href="http://localhost:3000/#/admin/appointment"><button>Appointment</button></a></div></div></div></div></div></div><div class="bottomBorder"></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./Cams Window Cleaning_files/bundle.js"></script><script src="./Cams Window Cleaning_files/1.chunk.js"></script><script src="./Cams Window Cleaning_files/main.chunk.js"></script><script src="./Cams Window Cleaning_files/main.31122f1b2bfa7534f250.hot-update.js"></script>
+
+</body></html>

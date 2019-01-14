@@ -86,7 +86,7 @@ class Home extends Component {
     handleAddComment() { }
 
     render() {
-
+        console.log(this.props)
         return (
             <div>
                 <header>
@@ -107,7 +107,7 @@ class Home extends Component {
 
 
                     <div className="picContainer">
-                        <div className="camsPic"></div>
+                        {/* <div className="camsPic"></div> */}
                     </div>
                     <div className="homeInfo">
                         <div className='services'>Services</div>
@@ -137,12 +137,12 @@ class Home extends Component {
                         <h5>Commercial Window Cleaning</h5>
                         <div className='homeBody'>
 
-                            <img id="businessPic" src={require('../business.jpg')} alt=""></img>
+                            <img id="businessPic" src={require('../businessNew.png')} alt=""></img>
                             <div className='text'>Make sure your busi​ness portrays the right message to potential customers. A clean first impression says a lot about your business.  We provide the same attention to detail as we do our residential customers.  We are not your typical commercial window cleaning company.  We scrub and detail each window by hand and leave no dirty residue behind.</div>
                         </div>
                     </div>
                     <div id='center'>
-                        <div>
+                        <div className='getQuote'>
                             <Link to="/quotes"><button className="nav">Get A Quote!</button></Link>
                         </div>
                         <div className='titleBoxes'>
@@ -160,7 +160,7 @@ class Home extends Component {
                                 {this.props.user.customerID ? (<div>
 
                                     <input placeholder="type here" className="commentInput" value={this.state.userInput} onChange={this.handleInput} />
-                                    <button onClick={this.handleClick}>Add</button>
+                                    <button className='comment-button' onClick={this.handleClick}>Add</button>
                                 </div>)
                                     : null
                                 }
@@ -186,19 +186,18 @@ class Home extends Component {
 
                         </div>
 
-
                         <div>
 
                             {this.props.user.admin ? (<div>
                                 <input className='updateInput' type='text' onChange={(e) => {
                                     this.setState({ updateInput: e.target.value })
                                 }} />Update Text
-                                   <Link to="/admin/users"> <button>Users</button></Link>
-                                <Link to="/admin/appointment"><button>Appointment</button></Link>
+                                   
                             </div>)
                                 : null
                             }
                         </div>
+
                     </div>
                 </div>
             </div>

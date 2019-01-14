@@ -4,11 +4,11 @@ export default function Contact(){
     return(
         <div className="Thankyou">
         <div className='contactPage'>
-            Contact Information:
+           <div className="contactTitle"> Contact Information:</div>
             <br></br>
-            Phone: 801-334-6788
+            <img id="phonePic" src={require('../download.png')} alt=""></img> Phone: 801-334-6788
             <br></br>
-            Email: CamWilkey@gmail.com
+            <img id="phonePic" src={require('../email.png')} alt=""></img> Email: CamWilkey@gmail.com
             <br></br>
 
 

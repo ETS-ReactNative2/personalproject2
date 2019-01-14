@@ -184,11 +184,11 @@ app.put('/api/comment/:id', async (req,res)=>{
 
 app.post('/api/quote', async (req, res) => {
     console.log(req.body)
-    const { fullName, address, city, zip, windowCount, windowsHigh, total } = req.body
+    const { fullName, address, city, zip, phoneNumber, windowCount, windowsHigh, total } = req.body
     const {customer_id}=req.session.user
     const db = req.app.get('db')
     
-    await db.create_user_quote([fullName, address, city, zip, windowCount, windowsHigh, total, customer_id])
+    await db.create_user_quote([fullName, address, city, zip, phoneNumber, windowCount, windowsHigh, total, customer_id])
     res.sendStatus(200)
 })
 
