@@ -139,6 +139,7 @@ app.get('/auth/logout', (req, res) => {
 app.get('/api/appointments', async (req, res)=>{
     const db = req.app.get('db')
     let appointments = await db.appointments_table()
+    console.log(appointments)
     res.status(200).send(appointments)
 })
 
@@ -182,11 +183,12 @@ app.put('/api/comment/:id', async (req,res)=>{
 
 app.post('/api/quote', async (req, res) => {
     console.log(req.body)
-    const { firstName, lastName, address, city, zip, windowCount, windowsHigh, total } = req.body
-    const {customer_id}=req.session.user
+    
+    const { fullName, address, city, zip, phoneNumber, windowCount, windowsHigh, total } = req.body
+    const {customer_id}= req.session.user
     const db = req.app.get('db')
     console.log(req.session.user)
-    await db.create_user_quote([firstName, lastName, address, city, zip, windowCount, windowsHigh, total, customer_id])
+    await db.create_user_quote([fullName, address, city, zip, phoneNumber, windowCount, windowsHigh, total, customer_id])
     res.sendStatus(200)
 })
 

@@ -40,17 +40,6 @@ class Home extends Component {
     }
 
 
-
-    // login() {
-    //     let {
-    //         REACT_APP_DOMAIN,
-    //         REACT_APP_CLIENT_ID
-    //     } = process.env;
-    //     let uri = `${encodeURIComponent(window.location.origin)}/auth/callback`
-
-    //     window.location = `https://${REACT_APP_DOMAIN}/authorize?client_id=${REACT_APP_CLIENT_ID}&scope=openid%20profile%20email&redirect_uri=${uri}&response_type=code`
-    // }
-
     handleInput(e) {
         if(e.target.value===null)
         alert("You can't add nothing")
@@ -88,93 +77,63 @@ class Home extends Component {
         
         return (
             <div>
-                <header>
-
-                    <div>
-                        {/* <button className="nav">HOME</button>
-                        <button className="nav">ABOUT</button>
-                        <button className="nav">CONTACT US</button>
-                    </div>
-                    <h1>Cam's Window Cleaning</h1>
-                    <div>
-                        <button className="cart">CART</button> */}
-                        {/* <button onClick={this.login} className="login">Admin Login</button> */}
-
-                    </div>
-                </header>
+                
                 <div className="body">
-                    
-                   
-                    <div className="picContainer">
-                    <div className="camsPic"></div> 
-                    </div> 
+                <div className='sub-title-container'>
+                <h1>UTAH VALLEYS WINDOW CLEANING EXPERT</h1>
+                </div>
+                    <div className='quote-btn'>
+                    <Link to="/quotes"><button className="nav">Get A FREE Quote!</button></Link> 
+                    </div>
                     <div className="homeInfo">
-                                
+                      
                     <img id="cleaningHousePic" src= {require('../cleaninghouse.jpg')} alt=""></img>     
-                     
-                           <h5> </h5>
+
                            
                            <div className="text">
-                           The appearance of your home is important to you and important to me too. That is why I work to make sure the inside and outside of your windows sparkle! I will make sure that the rest of your home is respected and kept clean by removing shoes while inside your home. You will love the way your windows look.    </div>
-                            
+                           <p>
+                           The appearance of your home is important to you and important to me too. That is why I work to make sure the inside and outside of your windows sparkle! At Cam's Window Cleaning I work to service my friends in neighbors in American Fork, Pleasant Grove, Orem, Lindon, and Lehi. I am personaly owned and operated which makes me cheaper and better then those others guys. I take pride in my work and hope to be able to service you and your family!  </p>   
+                           <br/>
+                           <ul>
+                               
+                               <li>✔ Weekly/monthly/quarterly/tri-annual/bi-annual/custom schedule</li>
+                               <li>✔ Mineral stain/hard water removal</li>
+                               <li>✔ Screen cleaning/sealing and repair</li>
+                               <li>✔ Construction cleaning</li>
+                               <li>✔ Mirror/chandelier/light fixture cleaning</li>
+                               <li>✔ Interior partition/interior glass surfaces</li>
+                               <li>✔ Pure water technology available</li>
+                               <li>✔ Solar panel cleaning & maintenance</li>
+                               <li>✔ Solar panel cleaning & maintenance</li>
+                               <li>✔ Glass restoration/resurfacing/scratched glass repair</li>
+                               <li>✔ Green seal certified glass cleaners used</li>
+                           </ul>
+                           </div>
+                           <div>
+                               
+                           </div>
                     </div>
-                    <div>
-                        <Link to="/quotes"><button className="nav">Get A Quote!</button></Link>
-                    </div>
-                    <div className='titleBoxes'>
-                        <h1 className='comment1'>Comments</h1>
-                    </div>
-                    <div className="comments">
-
-                        <div>
-                            
-                            <form className="input" />
-                            <h5 className="comments2">
-                                Please let me know how I have done!
-                                </h5>
-
-                            {this.props.user.customerID ? (<div>
-                                
-                                <input placeholder="type here" className="commentInput" value={this.state.userInput} onChange={this.handleInput} />
-                                <button onClick={this.handleClick}>Add</button>
-                                </div>)
-                                : null
-                            }
-
-
-                            {this.state.comments.map((comment) => {
-                                
-                                return (
-
-                                    < div className='theComment' key={comment.comment_id}>
-                                Customer({comment.customer_id}): {comment.comment}
-                                        {this.props.user.admin ? <div>
-                                            <button className="buttons" onClick= {()=>this.handleDelete(comment.comment_id)}>Delete</button>
-                                            <button className="buttons" onClick= {()=>this.handleUpdate(comment.comment_id)}>Edit</button>
-                                        </div>
-                                        : null
-                                        }
-                                    </div>
-                                )
-                            })}
-
-                          
-
-                        </div>
-                       
-                    </div>
-                    <div>
+                    <div className='images-container'>
+                        <img alt='house1' src={require('../images/house1.jpg')}/>
+                        <img alt='house2' src={require('../images/house2.jpeg')}/>
+                        <img alt='house3' src={require('../images/house3.jpeg')}/>
+                        <br/>
+                        <img alt='house4' src={require('../images/house4.jpeg')}/>
+                        <img alt='house5' src={require('../images/house5.jpeg')}/>
+                        <img alt='house6' src={require('../images/house6.jpeg')}/>
                         
-                                {this.props.user.admin ? (<div>
-                                    <input className='updateInput' type='text' onChange={(e)=>{
-             this.setState({updateInput: e.target.value})
-           }}/>Update Text
-                                   <Link to = "/admin/users"> <button>Users</button></Link>
-                                    <Link to ="/admin/appointment"><button>Appointment</button></Link>
-                                </div>)
-                            : null    
-                            }
-                            </div>
+                    </div>
+
+                    <div className='second-paragraph'>
+                        <p>
+                        Regularly scheduled maintenance cleanings are a time saving, stress free option our customers love. Customer loyalty and favorable word of mouth advertising has facilitated my success. I am proud to provide professionalism and dependability. I also enjoy seeing a window come clean after being soiled for 20 plus years without prior professional cleaning. I schedule service for all sizes and styles of homes across Utah, from 1,200 sq ft to 21,000 sq ft and everywhere in between.
+                        </p>
+                    </div>
+
+                    <div className='second-quote-btn'>
+                        <Link to="/quotes"><button className="nav">Get A FREE Quote!</button></Link>
+                    </div>
+                    
                 </div>
             </div>
         )

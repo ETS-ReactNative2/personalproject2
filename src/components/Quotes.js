@@ -8,8 +8,8 @@ class Quotes extends Component {
     constructor() {
         super();
         this.state = {
-            firstName: '',
-            lastName: '',
+            fullName: '',
+            phoneNumber: '',
             address: '',
             city: '',
             zip: '',
@@ -54,16 +54,16 @@ class Quotes extends Component {
     }
 
     quoteValidation() {
-        const { firstName, lastName, address, city, zip, windowCount, windowsHigh } = this.state
-        if (firstName && lastName && address && city && zip && windowCount && windowsHigh) {
+        const { fullName, address, city, zip, phoneNumber, windowCount, windowsHigh } = this.state
+        if (fullName && address && city && zip && phoneNumber &&windowCount && windowsHigh) {
             this.handleQuoteSubmit()
         }
         else { alert("Please complete the form") }
     }
 
     handleQuoteSubmit() {
-        const { firstName, lastName, address, city, zip, windowCount, windowsHigh, total } = this.state
-        axios.post('/api/quote', { firstName, lastName, address, city, zip, windowCount, windowsHigh, total }).then(() => {
+        const { fullName, address, city, zip, phoneNumber, windowCount, windowsHigh, total } = this.state
+        axios.post('/api/quote', { fullName, address, city, zip, phoneNumber, windowCount, windowsHigh, total }).then(() => {
             console.log("in the then")
             this.props.history.push("/ThankYou")
         })
@@ -95,31 +95,49 @@ class Quotes extends Component {
     render() {
         // console.log(this.props)
         return (
-            <div>
+            <div className='quotes-container'>
                 <div className='none'>
                     <h1 className='quotesTitle'>Fast And Easy Quote!</h1>
 
                     {this.props.user.customerID? 
                         <div className='quotesInput'>
-                    * First Name: <input onChange={(e) => this.setState({ firstName: e.target.value })} placeholder="First Name" className='eachInput'></input>
-                    * Last Name:  <input onChange={(e) => this.setState({ lastName: e.target.value })} placeholder="Last Name" className='eachInput'></input>
-                    * Address:  <input onChange={(e) => this.setState({ address: e.target.value })} placeholder='Address' className='eachInput'></input>
-                    * City: <input onChange={(e) => this.setState({ city: e.target.value })} placeholder='City' className='eachInput'></input>
-                    * Zip code:  <input onChange={(e) => this.setState({ zip: e.target.value })} placeholder='Zip code' className='eachInput'></input>
-                    * Window Count:  <input type='number' value={this.state.windowCount} onChange={(e) => this.handleWindowsInput(e.target.value)} placeholder='# of Windows' className='eachInput'></input>
-                    Windows over 20 feet high <input value={this.state.windowsHigh} onChange={(e) => this.handleHighWindowInput(e.target.value)} placeholder='High Windows' className='eachInput'></input>
-                    <div className=''>Total</div>
+                        <div className='eachInput'>
+                    * Full Name: <input onChange={(e) => this.setState({ fullName: e.target.value })} placeholder="Full Name" ></input>
+                    </div>
+                    <div className='eachInput'>
+                    * Address:  <input onChange={(e) => this.setState({ address: e.target.value })} placeholder='Address' ></input>
+                    </div>
+                    <div className='eachInput'>
+                    * City: <input onChange={(e) => this.setState({ city: e.target.value })} placeholder='City' ></input>
+                    </div>
+                    <div className='eachInput'>
+                    * Zip code:  <input onChange={(e) => this.setState({ zip: e.target.value })} placeholder='Zip code' ></input>
+                    </div>
+                    <div className='eachInput'>
+                    * Phone Number:  <input onChange={(e) => this.setState({ phoneNumber: e.target.value })} placeholder="Phone Number" ></input>
+                    </div>
+                    <div className='eachInput'>
+                    * Window Count:  <input type='number' value={this.state.windowCount} onChange={(e) => this.handleWindowsInput(e.target.value)} placeholder='# of Windows' ></input>
+                    </div>
+                    <div className='eachInput'>
+                    Windows over 20 feet high <input value={this.state.windowsHigh} onChange={(e) => this.handleHighWindowInput(e.target.value)} placeholder='High Windows' ></input>
+                    </div>
+                    <h2 className=''>Total</h2>
                     <div className='quotesTotal'>${this.state.total}.00</div>
                     <div><button className="getQuoteBtn" onClick={this.quoteValidation}>Schedule Now</button></div>
                     </div>
                     :
-                    <div className='quotesInput'>
-                    * Window Count:  <input type='number' value={this.state.windowCount} onChange={(e) => this.handleWindowsInput(e.target.value)} placeholder='# of Windows' className='eachInput'></input>
-                    Windows over 20 feet high <input value={this.state.windowsHigh} onChange={(e) => this.handleHighWindowInput(e.target.value)} placeholder='High Windows' className='eachInput'></input>
+                    <div className='quotesInput1'>
+                    <div className='eachInput'>
+                    * Window Count:  <input type='number' value={this.state.windowCount} onChange={(e) => this.handleWindowsInput(e.target.value)} placeholder='# of Windows' ></input>
+                    </div>
+                    <div className='eachInput'>
+                    Windows over 20 feet high <input value={this.state.windowsHigh} onChange={(e) => this.handleHighWindowInput(e.target.value)} placeholder='High Windows'></input>
+                    </div>
                     <div className=''>Total</div>
                     <div className='quotesTotal'>${this.state.total}.00</div>
                     <div>
-                    <div>Please login to set and pay for appointment---> <button className="nav" onClick={this.login}>Login</button></div>
+                    <div>Please login to request a appointment---> <button className="nav" onClick={this.login}>Login</button></div>
                     </div>
 
 

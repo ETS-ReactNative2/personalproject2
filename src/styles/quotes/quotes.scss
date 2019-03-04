@@ -1,0 +1,87 @@
+.quotes-container{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+
+    .quotesTitle{
+        padding-bottom: 10px;
+        text-align: center;
+        margin-top: 5vh;
+    }
+    
+    .quotesInput{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 45vw;
+        height: 70vh;
+        border-top-style:double;
+        border-bottom-style:double;
+        border-left-style: double;
+        border-right-style: double;
+        border-width:18px;
+        border-color:#db1717;
+        padding:6px;
+        justify-content: space-evenly;
+
+    .eachInput{
+        
+        
+    }
+    }
+    input{
+      width: 15vw;
+      height: 25px;
+      display: flex;
+      margin:auto;
+      font-size: 16px;
+      margin: 1px;
+      padding: 2;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    
+    }
+
+    .getQuoteBtn{
+        margin: 13px 0px;
+        width: 180px;
+            height: 50px;
+            font-size: 20px;
+            background-image: linear-gradient(#2193b0, #6dd5ed);
+            color: black;
+    }
+
+    .quotesInput1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 45vw;
+        height: 40vh;
+        border-top-style:double;
+        border-bottom-style:double;
+        border-left-style: double;
+        border-right-style: double;
+        border-width:18px;
+        border-color:#db1717;
+        padding:6px;
+        justify-content: space-evenly;
+
+    .eachInput{
+        
+        
+    }
+
+    input{
+        margin-top: 2vh;
+    }
+    }
+    button{
+        width: 120px;
+            height: 40px;
+            font-size: 20px;
+            background-image: linear-gradient(#2193b0, #6dd5ed);
+            color: black;
+    }
+
+}

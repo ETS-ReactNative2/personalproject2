@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import '../App.css'
 
-import hamburger from '.././hamburger_menu.svg'
+
 import { connect } from 'react-redux';
 import {updateUser} from '../ducks/reducer'
 import axios from 'axios'
-import sad from '.././Sad-face.jpg'
+
 
 class Nav extends Component {
     constructor(props) {
@@ -39,35 +39,24 @@ class Nav extends Component {
     render() {
         return (
             <div className='sides'>
-
-                <header className='header'>
-                    <img className="img2" onClick={this.toggle} alt="Toggle for menu" src={sad} />
-                    <ul className={this.state.show ? 'basic show' : 'basic'}>
-                    <div className="Joke">
-                    THIS IS MY ANNOUNCMENT THAT I WILL BE JOINING COHORT 43! 
-                    
-                    </div>
-                    <img className="jokePic" alt='' src={require('../Isuck.jpeg')} ></img>
-                    </ul>
-                    <div className="navBucket">
-                        {/* <Link to="/"><button className="nav">HOME</button></Link>
-                        <Link to="/about"><button className="nav">ABOUT</button></Link>
-                        <Link to="/contact"><button className="nav">CONTACT </button></Link> */}
-
-                    </div>
-                    <h1 className='businessName'>Cam's Window Cleaning</h1>
-                    <div>
-                    <button className="nav">CART</button>
+                <div className='cart-login-container'>
+                    {/* <div className="nav">CART</div> */}
                     {this.props.user.customerID ? 
                         
-                        <button onClick={this.logout} className="nav">Logout </button>
+                        <div onClick={this.logout} className="nav">Logout </div>
                         
                         :
-                         <button onClick={this.login} className="nav">Login</button>}
+                         <div onClick={this.login} className="nav">Login</div>}
                         
-                        {/* <button onClick={this.login} className="login">Admin Login</button> */}
+                      
 
                     </div>
+                <header className='header'>
+                <img id='cleaning-man-logo' src={require('../images/jhdsf.png')}/>
+                <img id='cleaning-man-logo2' src={require('../images/jhdsf.png')}/>
+                    
+                    <h1 className='businessName'>Cam's Window Cleaning</h1>
+                    
                 </header>
                 
             </div>

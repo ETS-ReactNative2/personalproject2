@@ -1,0 +1,65 @@
+.review-container{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient( #909192, #bdc3c7,);
+
+    .comments{
+        
+    }
+    .comment-title-container{
+        padding-top: 3vh;
+    }
+    .comments2{
+        text-align: center;
+    }
+    .comment-container{
+        display: flex;
+        justify-content: center;
+        height: 3vh;
+        margin: 1vh 1vw;
+        
+       
+        
+        .theComment{
+            text-align: center;
+            padding: 1vh 1vw;
+            border: solid black 1px 
+            ;
+            border-radius: 10px;
+            vertical-align: bottom;
+            max-width: 50%;
+            
+            
+        }
+    }
+    .inputContainer{
+        display: flex;
+        justify-content: center;
+        margin-top: 5vh;
+    input{
+        width: 15vw;
+        height: 3vh;
+        font-size: 20px; 
+        background-color: rgb(148, 148, 148);
+        border-top: 1px black solid;
+      border-left: 1px black solid;
+      border-right: none;
+      border-bottom: 1px black solid;
+    }
+    button{
+        background-color: black;
+        color: white;
+        border: none;
+        font-size: 15px;
+        
+    }
+}
+
+h1{
+    text-align: center;
+}
+h4{
+    margin: 2vh 0vw;
+}
+   
+}

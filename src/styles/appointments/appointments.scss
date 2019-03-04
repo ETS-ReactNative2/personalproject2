@@ -1,0 +1,45 @@
+.appointments{
+    
+
+    .appointmentsBox{
+        width: 100vw;
+        display: flex;
+        height: 4vh;
+        .long{
+            width: 16vw;
+        }
+        .short{
+            width: 8vw;
+        }
+        div{
+            font-size: 25px;
+            
+            
+        }
+    }
+    .appointment-titles{
+        width: 100vw;
+        display: flex;
+        height: 7vh;
+        
+        .long{
+            width: 16vw;
+        }
+        .short{
+            width: 8vw;
+            
+        }
+        div{
+            font-size: 28px;
+            border-bottom-style: ridge;
+            border-width: 10px;
+            border-color: #db1717;
+    
+        }
+        .border{
+            border-top: black solid 1px;
+        }
+
+    }
+    
+}

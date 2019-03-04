@@ -1,0 +1,57 @@
+.header{
+    text-align: center;
+    align-items: center;
+    background-image: linear-gradient(#ff0000, #800000);
+    width: 100vw; 
+    height: 13.1vh;
+    
+    .businessName{
+        color: white;
+        padding-top: 1vh; 
+    }
+
+    #cleaning-man-logo{
+        position: absolute;
+        height: 15vh;
+        right: 2%;
+        top: 3%;
+    }
+    #cleaning-man-logo2{
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+        position: absolute;
+        height: 15vh;
+        left: 2%;
+        top: 3%;
+    }
+}
+.cart-login-container{
+    height: 2.5vh;
+    width: 100vw;
+    background-image: linear-gradient(#bdc3c7, #2c3e50);
+    
+    
+    .nav{
+        position: absolute;
+        right: 1%;
+    }
+
+}
+
+.tabs{
+    width: 96vw;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 4vh;
+    padding: 0px 0px 0px 4vw;
+    
+    background-color: #800000;
+    .nav{
+        color: white;
+    }
+}

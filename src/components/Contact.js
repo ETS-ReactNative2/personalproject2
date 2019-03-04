@@ -2,17 +2,18 @@ import React from "react"
 
 export default function Contact(){
     return(
-        <div className="Thankyou">
+        <div className="contact-container">
         <div className='contactPage'>
-            Contact Information:
+            <div className='title'>Contact Information:</div>
             <br></br>
-            Phone: 801-334-6788
+            <div className='phone'> <img alt='phone svg' src={require('../images/phone.svg')}/> Phone: 801-334-6788</div>
             <br></br>
-            Email: CamWilkey@gmail.com
+            <div className='email'> <img alt='email svg' src={require('../images/email.png')}/>Email: CamWilkey@gmail.com</div>
             <br></br>
 
 
         </div>
+        
         </div>
     )
 }

@@ -30,9 +30,10 @@ class App extends Component {
       <div className="App">
       <Nav/>
       <div className='tabs'>
-                    <Link to="/"><button className="nav">HOME</button></Link>
-                        <Link to="/about"><button className="nav">ABOUT</button></Link>
-                        <Link to="/contact"><button className="nav">CONTACT </button></Link>
+                    <Link to="/"><div className="nav">HOME</div></Link>
+                        <Link to="/about"><div className="nav">ABOUT</div></Link>
+                        <Link to="/reviews"><div className="nav">CUSTOMER REVIEWS </div></Link>
+                        <Link to="/contact"><div className="nav">CONTACT </div></Link>
                         
                     </div>
      

@@ -1,0 +1,85 @@
+.aboutBody{
+   
+    align-content: center;
+    .each-slide2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size:40% 100%;
+        height: 100%;
+        z-index: -100;
+        background-image: url(../images/cam.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: black;
+        
+        
+    }
+    .each-slide1{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: 40% 100%;
+        z-index: -100;
+        height: 60vh;
+        background-image: url(../images/camfam.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: black;
+    }
+
+    .each-slide3{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: 45% 100%;
+        z-index: -100;
+        height: 60vh;
+        background-image: url(../images/camsfire.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: black;
+    }
+    .react-slideshow-container .nav {
+        height: 30px;
+        background: rgb(87, 87, 87);
+        width: 30px;
+        z-index: 10;
+        line-height: 30px;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 15px;
+        
+    }
+    .react-slideshow-container + div.indicators {
+        display: none;
+        justify-content: none;
+        margin-top: none;
+    
+        
+    }
+    
+       
+    .about{
+       text-align: center;
+        
+        .textContainer{
+            margin: 1vw 0vw;
+            align-content: center;
+            width: 100vw;
+        text{
+           
+           font-size: 30px;
+        }
+        h1{
+            padding-bottom: 2vh;
+        }
+    }
+        
+    }
+
+}
